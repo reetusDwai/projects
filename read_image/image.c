@@ -3,15 +3,13 @@
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image/stb_image.h"
-const size_t NUM_PIXELS_TO_PRINT = 10U;
-
 
 int main(void) {
 	int width, height, comp;
 	unsigned char *data = stbi_load("test.jpg", &width, &height, &comp, 0);
 	if (data) {
 		printf("width = %d, height = %d, comp = %d (channels)\n", width, height, comp);
-		for (size_t i = 0; i < NUM_PIXELS_TO_PRINT * comp; i++) {
+		for (int i = 0; i < width * height * comp; i++) {
 			printf("%02x%s", data[i], ((i + 1) % comp) ? "" : "\n");
 		}
 		printf("\n");
