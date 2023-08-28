@@ -2,5 +2,5 @@
 
 int main()
 {
-	prinf("works");
+	printf("works");
 }
