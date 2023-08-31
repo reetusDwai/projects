@@ -23,6 +23,8 @@ int[][] img_to_gray() {
 	return img;
 }
 
+// converts hex to gray
+
 // Luminace = 0.299 R + 0.587 G + 0.114 B
 int main(void) {
 }
